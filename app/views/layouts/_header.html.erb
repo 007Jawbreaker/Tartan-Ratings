@@ -1,0 +1,35 @@
+<div id="header">
+</div>
+
+<header>
+  <div>
+    <div>
+      <nav>
+        <ul>
+
+          <% if signed_in? %>
+          <li><%= link_to "Home", root_path %> </li>
+            <ul>
+            <li> 
+            <p>
+              <%= current_user.email %>
+            </p>
+            </li>
+
+            <li>
+
+  <%= link_to 'View Profile', @user %>
+</li>
+<li>
+<%= link_to "Sign out", signout_path, method: "delete" %>
+</li>
+</ul>
+
+            
+          
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

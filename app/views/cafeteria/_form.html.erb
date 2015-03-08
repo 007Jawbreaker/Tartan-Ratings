@@ -1,0 +1,33 @@
+<%= form_for(@cafeterium) do |f| %>
+  <% if @cafeterium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cafeterium.errors.count, "error") %> prohibited this cafeterium from being saved:</h2>
+
+      <ul>
+      <% @cafeterium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :item_name %><br>
+    <%= f.text_field :item_name %>
+  </div>
+  <div class="field">
+    <%= f.label :item_description %><br>
+    <%= f.text_field :item_description %>
+  </div>
+  <div class="field">
+    <%= f.label :item_price %><br>
+    <%= f.number_field :item_price %>
+  </div>
+  <div class="field">
+    <%= f.label :cafeteria_category_id %><br>
+    <%= f.number_field :cafeteria_category_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

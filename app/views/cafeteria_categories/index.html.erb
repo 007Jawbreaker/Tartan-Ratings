@@ -1,0 +1,27 @@
+<h1>Listing cafeteria_categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cafeteria_categories.each do |cafeteria_category| %>
+      <tr>
+        <td><%= cafeteria_category.name %></td>
+        <td><%= link_to 'Show', cafeteria_category %></td>
+        <td><%= link_to 'Edit', edit_cafeteria_category_path(cafeteria_category) %></td>
+        <td><%= link_to 'Destroy', cafeteria_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cafeteria category', new_cafeteria_category_path %>

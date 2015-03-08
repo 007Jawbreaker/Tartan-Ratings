@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<%= link_to image_tag("abc.png", :border => 0, :width => 200, :height => 200, :alt => 'courses'), {:action => 'index', :controller => 'courses'} %>
+
+<%= link_to image_tag("abc.png", :border => 0, :width => 200, :height => 200, :alt => 'cafeteria'), {:action => 'index', :controller => 'cafeteria'} %>
+
+<%= link_to image_tag("abc.png", :border => 0, :width => 200, :height => 200, :alt => 'clubs'), {:action => 'index', :controller => 'clubs'} %>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
